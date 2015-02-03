@@ -10,8 +10,8 @@
 	    font-weight: bold;
     }
     .postcell {
-	    margin-top: 10px;
 	    background-color: #FFFFCC;
+	    margin: 15px 0px;
 	    padding: 15px;
 	    border-radius: 8px;
     }
