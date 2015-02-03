@@ -4,9 +4,10 @@ use Diario::DB;
 use DateTime;
 use Encode;
 
+my $teng = Diario::DB->new( connect_info => [ 'dbi:mysql:diario:localhost', 'root', undef ] );
+
 sub index {
 	my $self = shift;
-        my $teng = Diario::DB->new( connect_info => [ 'dbi:mysql:diario:localhost', 'root', undef ] );
 	my $itr = $teng->search("diario", {});
 	my $entries = [];
 	while ( my $data = $itr->next ) {
@@ -29,7 +30,6 @@ sub create {
 	my $title = $self->param('title');
 	my $body = $self->param('body');
 	my $now = DateTime->now( time_zone => 'Asia/Tokyo' );
-        my $teng = Diario::DB->new( connect_info => [ 'dbi:mysql:diario:localhost', 'root', undef ] );
 	my $row = $teng->insert('diario', +{title => $title, description => $body, created_at => $now});
 	$self->redirect_to('/');
 }
@@ -37,7 +37,6 @@ sub create {
 sub delete {
 	my $self = shift;
 	my @articles = $self->param('delete');
-        my $teng = Diario::DB->new( connect_info => [ 'dbi:mysql:diario:localhost', 'root', undef ] );
 	for my $article(@articles) {
 		my $delete = $teng->delete('diario', +{id => $article});
 	}

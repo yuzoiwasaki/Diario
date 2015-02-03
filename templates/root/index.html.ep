@@ -13,7 +13,7 @@
 <div class="col-md-8">
 % for my $entry (@$entries) {
 <div class="postcell">
-  <div class="title"><%= $entry->{row_data}{created_at} %> <%= $entry->{row_data}{title} %></div>
+  <div class="title"><%= $entry->{row_data}{created_at} %>  <%= $entry->{row_data}{title} %></div>
   <div class="body"><%= $entry->{row_data}{description} %></div>
   <div class="delete">
   <input type="checkbox" name="delete" value="<%= $entry->{row_data}{id} %>"> 削除する</div>
