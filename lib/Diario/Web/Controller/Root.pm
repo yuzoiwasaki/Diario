@@ -34,4 +34,14 @@ sub create {
 	$self->redirect_to('/');
 }
 
+sub delete {
+	my $self = shift;
+	my @articles = $self->param('delete');
+        my $teng = Diario::DB->new( connect_info => [ 'dbi:mysql:diario:localhost', 'root', undef ] );
+	for my $article(@articles) {
+		my $delete = $teng->delete('diario', +{id => $article});
+	}
+	$self->redirect_to('/');
+}
+
 1;

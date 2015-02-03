@@ -8,17 +8,22 @@
 </div>
 </div>
 
+<form action="/delete" method="post">
 <div class="row">
 <div class="col-md-8">
 % for my $entry (@$entries) {
 <div class="postcell">
   <div class="title"><%= $entry->{row_data}{created_at} %> <%= $entry->{row_data}{title} %></div>
   <div class="body"><%= $entry->{row_data}{description} %></div>
+  <div class="delete">
+  <input type="checkbox" name="delete" value="<%= $entry->{row_data}{id} %>"> 削除する</div>
 </div>
 % }
 </div>
 
 <div class="col-md-4">
 <a href="/new"><button type="button" class="btn btn-success btn-block">日記を書く</button></a>
+<button type="submit" class="btn btn-danger btn-block">日記を消す</button>
 </div>
 </div>
+</form>

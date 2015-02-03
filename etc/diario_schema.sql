@@ -1,0 +1,7 @@
+CREATE TABLE diario (
+  id INT UNSIGNED AUTO_INCREMENT,
+  title TEXT NOT NULL,
+  description TEXT NOT NULL,
+  created_at DATETIME NOT NULL,
+  PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET 'utf8' engine=InnoDB;
