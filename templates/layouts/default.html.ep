@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diario</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+    .navbar-brand {
+	    font-style: italic;
+	    font-weight: bold;
+    }
+    .postcell {
+	    margin-top: 10px;
+	    background-color: #FFFFCC;
+	    padding: 15px;
+	    border-radius: 8px;
+    }
+    .postcell .title {
+	    font-weight: bold;
+    }
+    .postcell .body {
+	    word-wrap: break-word;
+    }
+    </style>
+  </head>
+  <body>
+    <header class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+	  <a href="/" class="navbar-brand">Diario</a>
+	</div>
+      </div>
+    </header>
+    <div class="container">
+      <%= content %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+% layout 'default';
+
+<div class="row">
+<div class="col-md-8">
+<div class="page-header">
+  <h1>記事一覧</h1>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-8">
+% for my $entry (@$entries) {
+<div class="postcell">
+  <div class="title"><%= $entry->{row_data}{created_at} %> <%= $entry->{row_data}{title} %></div>
+  <div class="body"><%= $entry->{row_data}{description} %></div>
+</div>
+% }
+</div>
+
+<div class="col-md-4">
+<a href="/new"><button type="button" class="btn btn-success btn-block">日記を書く</button></a>
+</div>
+</div>
