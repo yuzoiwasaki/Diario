@@ -36,7 +36,7 @@ sub create {
 
 sub delete {
 	my $self = shift;
-	my @articles = $self->param('delete');
+	my @articles = $self->every_param('delete');
 	for my $article(@articles) {
 		my $delete = $teng->delete('diario', +{id => $article});
 	}
