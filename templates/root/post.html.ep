@@ -14,7 +14,7 @@
 
 <div class="form-group">
   <label>本文</label>
-  <textarea name="body" rows="15" cols="40" placeholder="本文を入力してください" class="form-control"></textarea>
+  <textarea name="body" rows="15" placeholder="本文を入力してください" class="form-control"></textarea>
 </div>
 </div>
 </div>

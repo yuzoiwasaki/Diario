@@ -24,7 +24,7 @@
 	    word-wrap: break-word;
     }
     .postcell .delete {
-            margin-top: 20px;
+      margin-top: 20px;
 	    font-size: 80%;
 	    text-align: right;
     }
