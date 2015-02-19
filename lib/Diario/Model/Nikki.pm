@@ -17,7 +17,7 @@ sub get_entries {
     $data->{row_data}{title} = decode_utf8($data->{row_data}{title});
     $data->{row_data}{description} = decode_utf8($data->{row_data}{description});
     push @$entries, $data;
-	}
+  }
   @$entries = reverse @$entries;
   return $entries;
 }
