@@ -6,6 +6,7 @@ use DBI;
 use SQL::SplitStatement;
 use Path::Tiny;
 use Test::mysqld;
+use Diario::Model::Nikki;
 
 my $mysqld = Test::mysqld->new(
   my_cnf => {
@@ -33,5 +34,10 @@ for ( $splitter->split($initial_sql) ) {
 }
 my $dsn = $mysqld->dsn();
 ok $dsn;
+
+use_ok 'Diario::Model::Nikki';
+
+my $instance = Diario::Model::Nikki->new;
+isa_ok $instance, 'Diario::Model::Nikki';
 
 done_testing();
