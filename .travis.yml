@@ -3,4 +3,3 @@ perl:
   - "5.18"
 before_script:
   - mysql -uroot -e "create database diario"
-  - mysql -uroot -e "use diario; create table diario ( id INT UNSIGNED AUTO_INCREMENT, title TEXT NOT NULL, description TEXT NOT NULL, created_at DATETIME NOT NULL, PRIMARY KEY (`id`) )"
