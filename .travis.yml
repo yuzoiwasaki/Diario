@@ -3,3 +3,4 @@ perl:
   - "5.18"
 before_script:
   - mysql -uroot -e "create database diario"
+script: prove -Ilib t/basic.t
